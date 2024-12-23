@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Tea Bliss</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f3f0;
+      color: #333;
+    }
+
+    h1, h2 {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+        /* Flexbox layout for the main container */
+    .main-container {
+      display: flex;
+      flex-direction: column; /* Stack sections vertically */
+      gap: 40px; /* Add spacing between sections */
+      padding: 20px;
+    }
+        /* General Section Styling */
+    .section {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .section h2 {
+      margin-top: 0;
+    }
+
+
+    /* Header */
+    header {
+      background-color: #fce7dc;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #6b4226;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #6b4226;
+      font-weight: bold;
+    }
+
+    .nav-menu a:hover {
+      color: #e57c61;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #d8b6db;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin: 0;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Bubble Background */
+    .hero::before {
+      content: '';
+      background: radial-gradient(circle, #fce7dc 50%, transparent 90%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2em;
+      color: #6b4226;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      margin: 0 auto;
+      max-width: 800px;
+      color: #555;
+    }
+#container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin: 20px 0; 
+}
+
+#blockA, #blockB, #blockC {
+  flex: 1; /* Ensures all blocks take equal width */
+  padding: 10px;
+  height: 170px;
+  box-sizing: border-box;
+}
+
+#blockA {
+  background-color: #96C5F7;
+}
+
+#blockB {
+  background-color: #A9D3FF;
+  margin: 0 5px; 
+}
+
+#blockC {
+  background-color: #F2F4FF;
+  border: 5px solid black;
+}
+#container2 {
+  display: flex;
+  justify-content: space-between; /* Ensures even spacing between blocks */
+  align-items: center;
+  margin: 20px 0; /* Optional spacing around the container */
+}
+
+#blockD, #blockE, #blockF, #blockG {
+  flex: 1; /* Ensures all blocks take equal width */
+  padding: 10px;
+  height: 210px;
+  box-sizing: border-box;
+}
+
+#blockD {
+  background-color: #FFD6E0;
+}
+
+#blockE {
+  background-color: #FFA8B6;
+  margin: 0 5px; /* Adds spacing between blocks */
+}
+
+#blockF {
+  background-color: #FFB5A7;
+  margin: 0 5px;
+}
+
+#blockG {
+  background-color: #FFC3A0;
+}
+    #container3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin: 20px 0; 
+}
+
+#blockH, #blockI, #blockJ {
+  flex: 1; /* Ensures all blocks take equal width */
+  padding: 10px;
+  height: 170px;
+  box-sizing: border-box;
+}
+
+#blockH {
+  background-color: #96C5F7;
+}
+
+#blockI {
+  background-color: #A9D3FF;
+  margin: 0 5px; 
+}
+
+#blockJ {
+  background-color: #F2F4FF;
+  border: 5px solid black;
+}
+#deals-images {
+  display: flex;
+  justify-content: space-between; /* Space between images */
+  align-items: center; /* Align images vertically */
+  gap: 10px; /* Adds spacing between images */
+  margin-top: 20px; /* Adds spacing above the images */
+}
+
+#deals-images img {
+  flex: 1; /* Makes all images take equal space */
+  max-width: 100%; /* Ensures images fit within their containers */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 10px; /* Optional: Rounds the corners of the images */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visuals */
+}
+    #container4 {
+  display: flex;
+  justify-content: space-between; /* Adds spacing between blocks */
+  align-items: center; /* Aligns items vertically */
+  gap: 10px; /* Optional: Adds spacing between blocks */
+  margin: 20px 0; /* Optional: Adds spacing above and below the container */
+}
+
+#blockK, #blockL {
+  flex: 1; /* Ensures both blocks take equal width */
+  padding: 10px;
+  height: 265px;
+  box-sizing: border-box;
+}
+
+#blockK {
+  background-color: #CFF1EF;
+}
+
+#blockL {
+  background-color: #E4F9F5;
+}
+    #favourites-images {
+  display: flex;
+  justify-content: space-between; /* Space between images */
+  align-items: center; /* Align images vertically */
+  gap: 10px; /* Adds spacing between images */
+  margin-top: 20px; /* Adds spacing above the images */
+}
+
+#favourites-images img {
+  flex: 1; /* Makes all images take equal space */
+  max-width: 100%; /* Ensures images fit within their containers */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 10px; /* Optional: Rounds the corners of the images */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visuals */
+}
+    
+    /* Footer */
+    footer {
+      background-color: #fce7dc;
+      text-align: center;
+      padding: 10px 0;
+      color: #6b4226;
+    }
+
+    /* Navigation Link Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Bubble Tea Bliss</div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#deals">Deals</a></li>
+        <li><a href="#diy">DIY</a></li>
+        <li><a href="#favourites">Favourites</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Main Container for Vertical Sections -->
+  <main class="main-container">
+
+  <!-- Hero Section -->
+  <section class="hero"> 
+       <h1>
+        Sip the Joy, One Bubble at a Time!
+       </h1>
+    </section>    
+             
+    <!--Home-->
+    <section id="home" class="section">
+      <h2>
+        Welcome 
+      </h2>
+      <p>
+        Here, we celebrate the delightful world of bubble tea—where creativity meets flavor in every sip. Whether you're a seasoned boba lover or just discovering the magic of chewy tapioca pearls and refreshing tea blends, you're in the right place. Dive into the history, explore exciting flavors, and even learn how to craft your own bubble tea creations. Let’s sip, savor, and share the joy of boba together!🧋✨
+      </p>
+    </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About</h2>
+    <h3>
+      What is blubble tea?
+    </h3>
+    <p>Bubble tea is a delicious drink that originated in Taiwan in the 1980s. It typically combines tea, milk, and sweet flavors, with chewy tapioca pearls or other toppings added for fun and texture. Over the years, it has become a global phenomenon, with endless flavor combinations and creative twists to suit every taste. Discover the magic of bubble tea! Learn about the flavours, toppings, and unique experiences that make every cup special.</p>
+    <h3>
+      Why I love Bubble Tea
+    </h3>
+<div id="container1">
+  <div id="blockA">
+    Customization: Choose your tea base, sweetness level, and toppings to create a drink that's uniquely yours.
+  </div>
+  <div id="blockB">
+    Variety: From classic milk teas to fruity, herbal, or even coffee-based options, there’s something for everyone.
+  </div>
+  <div id="blockC">
+    Fun Factor: Drinking bubble tea is an experience, from the oversized straw to the surprise of chewy pearls in every sip.
+  </div>
+</div>
+    <h3>
+      Fun Facts About Bubble Tea
+    </h3>
+    <div id="container2">
+  <div id="blockD">
+    The tapioca pearls, or “boba,” are made from cassava root starch and are boiled until they’re perfectly chewy.
+  </div>
+  <div id="blockE">
+    The most popular bubble tea flavor worldwide is classic milk tea with tapioca pearls.
+  </div>
+  <div id="blockF">
+    Some shops now offer popping boba, which burst with fruit juice when you bite into them!
+  </div>
+  <div id="blockG">
+    Bubble tea has inspired desserts, merchandise, and even themed cafes worldwide.
+  </div>
+</div>
+    <h3>
+      My Goal
+    </h3>
+    <p>
+      I aim to share my love for this drink by diving into its history, exploring its endless possibilities, and celebrating its vibrant community. Whether you're a fan of classic milk tea or love experimenting with bold new flavors, there’s always something to sip and enjoy! 🧋
+    </p>
+  </section>
+
+  <!-- History Section -->
+  <section id="history" class="section">
+    <h2>History</h2>
+    <p>Bubble tea originated in Taiwan in the 1980s, blending tea with milk, sugar, and chewy tapioca pearls. Today, it’s a worldwide sensation with endless variations. Let’s dive into its flavorful past!</p>
+    <h3>
+      How it Got its Name
+    </h3>
+    <p>
+      The term "bubble tea" comes from the frothy bubbles that form when the drink is shaken to mix the ingredients. While some people associate the name with the tapioca pearls at the bottom, the bubbly top is the real inspiration!
+    </p>
+    <h3>
+      Going Global
+    </h3>
+    <p>
+      By the 1990s, bubble tea had spread across Asia, becoming a staple in countries like Japan, South Korea, and China. Soon after, it began making its way to North America, Australia, and Europe, where it gained massive popularity among younger generations.
+    </p>
+    <h3>
+      Key milestones in its global journey:
+    </h3>
+    <div id="container3">
+  <div id="blockH">
+    1990s: Bubble tea shops began popping up in Asian immigrant communities in the U.S. and Canada.
+  </div>
+  <div id="blockI">
+    2000s: The internet and social media played a significant role in introducing bubble tea to wider audiences.
+  </div>
+  <div id="blockJ">
+    2010s: Bubble tea went mainstream, with major cities worldwide opening specialty shops offering creative and Instagram-worthy drinks.
+  </div>
+</div>
+    <h3>
+      Why it Stands the Test of Time
+    </h3>
+    <p>
+      Bubble tea’s charm lies in its ability to adapt and evolve while staying true to its playful origins. Its perfect blend of texture, flavor, and customization has made it a beloved treat across cultures, generations, and borders.<br>From its humble beginnings in Taiwan to its global success, bubble tea is more than just a drink—it’s a cultural icon that brings people together, one sip at a time.
+    </p>
+  </section>
+
+  <!-- Deals Section -->
+  <section id="deals" class="section">
+    <h2>Deals</h2>
+    <p>Here are some boba deals and discounts to enjoy your favorite drinks at great prices. Don’t miss out!
+    </p>
+    <div id="deals-images">
+    <img src="images-1.jpeg" alt="Bubble Tea Deal 1">
+    <img src="Unknown.jpeg" alt="Bubble Tea Deal 2">
+    <img src="images.jpeg" alt="Bubble Tea Deal 3">
+  </div>
+  </section>
+
+  <!-- DIY Section -->
+  <section id="diy" class="section">
+    <h2>DIY</h2>
+    <p>Bring the boba experience home! Learn how to make your own bubble tea with simple recipes and tips for customizing your perfect drink.</p>
+    <h3>
+      What You'll Need
+    </h3>
+    <div id="container4">
+  <div id="blockK">
+    Ingredients:<br> - Black or green tea (loose-leaf or tea bags)<br> - Tapioca pearls or your choice of toppings (jellies, popping boba, etc.)<br> - Sweetener (sugar, honey, or flavored syrups)<br> - Milk or non-dairy alternatives (e.g., almond, oat, or coconut milk)<br> - Ice cubes (optional)
+  </div>
+  <div id="blockL">
+    Tools:<br> - Medium-sized pot (to cook tapioca pearls)<br> - Strainer<br> - Shaker or mason jar (to mix the tea)<br> - Wide straws for that perfect bubble tea experience
+  </div>
+</div>
+    <h3>
+      Step-By-Step Instructions
+    </h3>
+    <p>
+      1. Prepare the Tapioca Pearls<br>
+      - Boil water in a medium pot and add tapioca pearls. Cook according to the package instructions (typically 15-20 minutes).<br> - Once cooked, drain and rinse with cold water. Sweeten with a tablespoon of sugar or honey.<br>
+      2. Brew the Tea<br>
+      - Steep your tea of choice in hot water for 3-5 minutes. Adjust strength based on preference.<br> - Let the tea cool to room temperature or chill it in the fridge if making iced bubble tea.<br>
+      3. Mix the Base<br>
+      - In a shaker or mason jar, combine brewed tea, milk, sweetener, and ice. Shake vigorously to mix and create frothy bubbles.<br>
+      4. Assemble Your Bubble Tea<br>
+       - Add the cooked tapioca pearls or toppings to the bottom of a tall glass.<br> - Pour your mixed tea over the pearls.<br> - Insert a wide straw, stir, and enjoy!
+    </p>
+    <h3>
+      Where to get Ingredients
+    </h3>
+    <p>
+      Check your local Asian grocery store or order online from specialty stores. You can even buy DIY kits that include everything you need in one package!
+    </p>
+  </section>
+  
+  <section id="favourites" class="section">
+  <h2>
+    My Favourites
+  </h2>
+    <p>
+      Here are some of my regular orders!
+    </p>
+    <div id="favourites-images">
+      <div>
+        <img src="brown.jpeg" alt="BrownSugar Bubble Tea">
+        <h3>
+          Brown Sugar Bubble Tea 
+        </h3>
+      </div>
+      <div>
+        <img src="peach1.jpeg" alt="qq Peach Bubble Tea">
+        <h3>
+          QQ Peach Bubble Tea
+        </h3>
+      </div>
+      <div>
+        <img src="mango1.jpeg" alt="Mango Diamond Slush">
+        <h3>
+          Mango Diamond Slush
+        </h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Want to connect with people who love bubble tea as much as you do? Here are some fun forums and communities to check out:<br>
+      <a href="https://www.reddit.com/r/bubbletea/?rdt=61852">Reddit’s r/bubbletea</a>: A lively subreddit where fans share recipes, reviews, and their love for all things boba.<br>
+      <a href="https://www.teachat.com/viewtopic.php?t=18243">TeaChat</a>: A dedicated online community for bubble tea enthusiasts to swap tips, favorite shops, and DIY ideas.<br><a href="https://www.instagram.com/uwbobatime/">UWBobaTime</a>: A University of Waterloo Club that aims to create an inclusive and safe space for all bubble tea drinkers.</p>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Bubble Tea Bliss. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
