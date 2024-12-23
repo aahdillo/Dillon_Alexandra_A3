@@ -23,11 +23,11 @@
       font-size: 1rem;
       line-height: 1.5;
     }
-        /* Flexbox layout for the main container */
+    
     .main-container {
       display: flex;
-      flex-direction: column; /* Stack sections vertically */
-      gap: 40px; /* Add spacing between sections */
+      flex-direction: column; 
+      gap: 40px; 
       padding: 20px;
     }
         /* General Section Styling */
@@ -98,6 +98,13 @@
     }
 
     /* Bubble Background */
+    /*
+Code copied from: https://www.w3schools.com/cssref/func_radial-gradient.php
+Author: w3schools
+Name: CSS radial-gradient() function
+Description: this function sets a raidial gradient as the background image
+Date retrieved: 10/12/24
+--> */
     .hero::before {
       content: '';
       background: radial-gradient(circle, #fce7dc 50%, transparent 90%);
@@ -134,9 +141,14 @@
 }
 
 #blockA, #blockB, #blockC {
-  flex: 1; /* Ensures all blocks take equal width */
+  flex: 1; 
   padding: 10px;
-  height: 170px;
+  border-radius: 10px;
+  /* Code copied from: https://www.w3schools.com/css/css3_borders.asp
+  Author: w3schools
+  Name: CSS Rounded Corners
+  Description: this function can give any element rounded corners
+  Date retrieved: 10/12/24 */
   box-sizing: border-box;
 }
 
@@ -155,15 +167,15 @@
 }
 #container2 {
   display: flex;
-  justify-content: space-between; /* Ensures even spacing between blocks */
+  justify-content: space-between; 
   align-items: center;
-  margin: 20px 0; /* Optional spacing around the container */
+  margin: 20px 0; 
 }
 
 #blockD, #blockE, #blockF, #blockG {
-  flex: 1; /* Ensures all blocks take equal width */
+  flex: 1; 
   padding: 10px;
-  height: 210px;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
@@ -173,7 +185,7 @@
 
 #blockE {
   background-color: #FFA8B6;
-  margin: 0 5px; /* Adds spacing between blocks */
+  margin: 0 5px; 
 }
 
 #blockF {
@@ -192,9 +204,9 @@
 }
 
 #blockH, #blockI, #blockJ {
-  flex: 1; /* Ensures all blocks take equal width */
+  flex: 1; 
   padding: 10px;
-  height: 170px;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
@@ -213,31 +225,30 @@
 }
 #deals-images {
   display: flex;
-  justify-content: space-between; /* Space between images */
-  align-items: center; /* Align images vertically */
-  gap: 10px; /* Adds spacing between images */
-  margin-top: 20px; /* Adds spacing above the images */
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 20px; 
 }
 
 #deals-images img {
-  flex: 1; /* Makes all images take equal space */
-  max-width: 100%; /* Ensures images fit within their containers */
-  height: auto; /* Maintains the aspect ratio */
-  border-radius: 10px; /* Optional: Rounds the corners of the images */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visuals */
+  flex: 1; 
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
 }
     #container4 {
   display: flex;
-  justify-content: space-between; /* Adds spacing between blocks */
-  align-items: center; /* Aligns items vertically */
-  gap: 10px; /* Optional: Adds spacing between blocks */
-  margin: 20px 0; /* Optional: Adds spacing above and below the container */
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 10px; 
+  margin: 20px 0; 
 }
 
 #blockK, #blockL {
-  flex: 1; /* Ensures both blocks take equal width */
+  flex: 1; 
   padding: 10px;
-  height: 265px;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
@@ -250,18 +261,24 @@
 }
     #favourites-images {
   display: flex;
-  justify-content: space-between; /* Space between images */
-  align-items: center; /* Align images vertically */
-  gap: 10px; /* Adds spacing between images */
-  margin-top: 20px; /* Adds spacing above the images */
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 20px; 
 }
 
 #favourites-images img {
-  flex: 1; /* Makes all images take equal space */
-  max-width: 100%; /* Ensures images fit within their containers */
-  height: auto; /* Maintains the aspect ratio */
-  border-radius: 10px; /* Optional: Rounds the corners of the images */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visuals */
+  flex: 1; 
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
+}
+    #container1, #container2, #container3, #container4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; 
+  gap: 10px; 
+  margin: 20px 0;
 }
     
     /* Footer */
@@ -311,7 +328,7 @@
         Welcome 
       </h2>
       <p>
-        Here, we celebrate the delightful world of bubble tea—where creativity meets flavor in every sip. Whether you're a seasoned boba lover or just discovering the magic of chewy tapioca pearls and refreshing tea blends, you're in the right place. Dive into the history, explore exciting flavors, and even learn how to craft your own bubble tea creations. Let’s sip, savor, and share the joy of boba together!🧋✨
+        Here, we celebrate the delightful world of bubble tea—where creativity meets flavor in every sip. Whether you're a seasoned boba lover or just discovering the magic of chewy tapioca pearls and refreshing tea blends, you're in the right place. Dive into the history, explore exciting flavors, and even learn how to craft your own bubble tea creations. Let’s sip, savor, and share the joy of boba together!
       </p>
     </section>
 
@@ -357,7 +374,7 @@
       My Goal
     </h3>
     <p>
-      I aim to share my love for this drink by diving into its history, exploring its endless possibilities, and celebrating its vibrant community. Whether you're a fan of classic milk tea or love experimenting with bold new flavors, there’s always something to sip and enjoy! 🧋
+      I aim to share my love for this drink by diving into its history, exploring its endless possibilities, and celebrating its vibrant community. Whether you're a fan of classic milk tea or love experimenting with bold new flavors, there’s always something to sip and enjoy! 
     </p>
   </section>
 
